@@ -23,7 +23,7 @@ class LoginView(APIView):
                     key='auth_token',
                     value=token.key,
                     httponly=True,
-                    samesite='Lax',
+                    samesite='None',
                     secure=True  # Set to True in production with HTTPS
                 )
                 return response
