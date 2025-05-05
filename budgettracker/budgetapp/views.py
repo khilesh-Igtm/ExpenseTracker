@@ -24,7 +24,7 @@ class LoginView(APIView):
                     value=token.key,
                     httponly=True,
                     samesite='Lax',
-                    secure=False  # Set to True in production with HTTPS
+                    secure=True  # Set to True in production with HTTPS
                 )
                 return response
             return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
